@@ -1,17 +1,17 @@
 import React from 'react';
 
-const TaskItem = ({ task, onMarkCompleted  }) => {
+const TaskItem = ({ task, onMarkCompleted }) => {
     const handleMarkCompleted = () => {
-        onMarkCompleted(task.id);  
+        onMarkCompleted(task.id);
     };
 
     return (
-        <div className="d-flex justify-content-between align-items-center mb-3 p-3 border rounded shadow-sm">
+        <div className="task-card d-flex justify-content-between align-items-center mb-3 p-3">
             <div>
-                <h5>{task.title}</h5>
-                <p>{task.description}</p>
+                <div className="task-title">{task.title}</div>
+                <p className="task-desc">{task.description}</p>
             </div>
-            <button className="btn btn-success" onClick={handleMarkCompleted}>
+            <button className="btn-done" onClick={handleMarkCompleted}>
                 Done
             </button>
         </div>

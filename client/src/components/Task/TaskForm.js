@@ -10,7 +10,7 @@ const TaskForm = ({ onAddTask }) => {
     const handleAdd = () => {
         if (!title || !description) {
             toast.error("Please fill in both the title and description.");
-            return; 
+            return;
         }
         onAddTask({ title, description });
         setTitle('');
@@ -19,7 +19,7 @@ const TaskForm = ({ onAddTask }) => {
 
     return (
         <div className="container py-4">
-            <h2>Add a Task</h2>
+            <h3 className="mb-3"> <b>Add a Task</b></h3>
             <div className="mb-3">
                 <label htmlFor="title" className="form-label">Title</label>
                 <input
@@ -41,7 +41,11 @@ const TaskForm = ({ onAddTask }) => {
                     placeholder="Enter task description"
                 />
             </div>
-            <button className="btn btn-primary" onClick={handleAdd}>Add</button>
+            <div className="text-end">
+                <button className="btn btn-primary px-4" onClick={handleAdd}>
+                    Add
+                </button>
+            </div>
         </div>
     );
 };
