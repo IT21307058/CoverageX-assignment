@@ -6,12 +6,12 @@ const TaskItem = ({ task, onMarkCompleted }) => {
     };
 
     return (
-        <div className="task-card d-flex justify-content-between align-items-center mb-3 p-3">
+        <div className="task-card d-flex justify-content-between align-items-center mb-3 p-3" data-testid={`task-${task.id}`}>
             <div>
                 <div className="task-title">{task.title}</div>
                 <p className="task-desc">{task.description}</p>
             </div>
-            <button className="btn-done" onClick={handleMarkCompleted}>
+            <button className="btn-done" data-testid={`done-btn-${task.id}`} onClick={handleMarkCompleted}>
                 Done
             </button>
         </div>

@@ -28,6 +28,7 @@ const TaskForm = ({ onAddTask }) => {
                     id="title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    data-testid="title-input"
                     placeholder="Enter task title"
                 />
             </div>
@@ -38,11 +39,12 @@ const TaskForm = ({ onAddTask }) => {
                     id="description"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
+                    data-testid="description-input"
                     placeholder="Enter task description"
                 />
             </div>
             <div className="text-end">
-                <button className="btn btn-primary px-4" onClick={handleAdd}>
+                <button className="btn btn-primary px-4" data-testid="add-btn" onClick={handleAdd}>
                     Add
                 </button>
             </div>
