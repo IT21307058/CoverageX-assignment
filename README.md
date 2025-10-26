@@ -93,11 +93,14 @@ Dockerfiles:
 
 #### 📁 Navigate to backend folder
 ```bash
-cd server 
+cd server
+``` 
 
 ####  Build the project
 ```bash
 mvn clean package
+```
+
 
 ####  Run the Spring Boot application
 ```bash
@@ -109,22 +112,24 @@ mvn spring-boot:run
 #### 📁 Navigate to backend folder
 ```bash
 cd client
+```
 
 ####  Install dependencies
 ```bash
 npm i
+```
 
 ####  Run the development server
 ```bash
 npm start
-
+```
 
 ### 🖥️ 2. Docker Compose
 
 #### Run backend, database and frontend containers
 ```bash
 docker compose up
-
+```
 
 ### 🖥️ 2. Testing Instructions
 
@@ -132,11 +137,14 @@ docker compose up
 ```bash
 cd backend
 mvn test
+```
+
 
 #### End to End Testing
 ```bash
 cd frontend
 npx cypress open
+```
 
 
 
