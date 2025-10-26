@@ -105,7 +105,7 @@ mvn clean package
 ####  Run the Spring Boot application
 ```bash
 mvn spring-boot:run
-
+```
 
 ### 🖥️ 2. Frontend Setup (React)
 
