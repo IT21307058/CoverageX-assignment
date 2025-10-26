@@ -1,3 +1,7 @@
+## Overall system architecture
+
+<img width="1151" height="492" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/f9135db0-61dc-4949-a939-de713373c1df" />
+
 ## 🧠 Approach to the Solution
 
 ### 1. Problem Understanding
