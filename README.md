@@ -1,3 +1,8 @@
+## Overall system architecture
+<img width="1151" height="492" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/276c8297-ffbe-4258-9ff3-23e946948f72" />
+
+### Swagger api documentation = http://localhost:8080/swagger-ui/index.html
+
 ## 🧠 Approach to the Solution
 
 ### 1. Problem Understanding
