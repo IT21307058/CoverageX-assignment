@@ -1,6 +1,5 @@
 ## Overall system architecture
-
-<img width="1151" height="492" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/f9135db0-61dc-4949-a939-de713373c1df" />
+<img width="1151" height="492" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/276c8297-ffbe-4258-9ff3-23e946948f72" />
 
 ## 🧠 Approach to the Solution
 
