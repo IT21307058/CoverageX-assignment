@@ -11,7 +11,7 @@ import io.swagger.v3.oas.annotations.info.Info;
                         email="bhanukalakshitha22@gmail.com"
                 ),
                 description = "Create a simple Spring Boot application that provides a RESTful API for managing a list of tasks.",
-                title = "Cypso Labs",
+                title = "CoverageX Task Management API",
                 version = "1.0"
 
         )
