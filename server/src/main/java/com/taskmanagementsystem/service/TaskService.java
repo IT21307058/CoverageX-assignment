@@ -36,32 +36,6 @@ public class TaskService implements TaskServiceInterface {
                 .map(task -> taskMapper.mapToDTO(task));
     }
 
-    // Get one
-    public TaskDTO getTaskById(Long id) {
-        Task task = taskRepository.findById(id)
-                .orElseThrow(() -> new TaskNotFoundException(id));
-        return taskMapper.mapToDTO(task);
-    }
-
-    // Update
-    public TaskDTO updateTask(Long id, TaskDTO dto) {
-        Task task = taskRepository.findById(id)
-                .orElseThrow(() -> new TaskNotFoundException(id));
-        task.setTitle(dto.getTitle());
-        task.setDescription(dto.getDescription());
-        task.setStatus(dto.getStatus());
-
-        Task updated = taskRepository.save(task);
-        return taskMapper.mapToDTO(updated);
-    }
-
-    // Delete
-    public void deleteTask(Long id) {
-        Task task = taskRepository.findById(id)
-                .orElseThrow(() -> new TaskNotFoundException(id));
-        taskRepository.delete(task);
-    }
-
     public TaskDTO markTaskAsCompleted(Long id) {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new TaskNotFoundException(id));

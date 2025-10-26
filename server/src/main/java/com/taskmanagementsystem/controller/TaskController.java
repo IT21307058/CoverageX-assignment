@@ -31,28 +31,6 @@ public class TaskController {
         return taskService.getAllTasks(pageable);
     }
 
-    // Get one specific task
-    @GetMapping("/{id}")
-    public ResponseEntity<TaskDTO> getTaskById(@PathVariable Long id) {
-        TaskDTO dto = taskService.getTaskById(id);
-        return ResponseEntity.ok(dto);
-    }
-
-    // Update existing task
-    @PutMapping("/{id}")
-    public ResponseEntity<TaskDTO> updateTask(@PathVariable Long id,
-            @Valid @RequestBody TaskDTO taskDetails) {
-        TaskDTO updated = taskService.updateTask(id, taskDetails);
-        return ResponseEntity.ok(updated);
-    }
-
-    // Delete task
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
-        taskService.deleteTask(id);
-        return ResponseEntity.noContent().build();
-    }
-
     @PatchMapping("/{id}/markCompleted")
     public ResponseEntity<TaskDTO> markTaskAsCompleted(@PathVariable Long id) {
         TaskDTO taskDTO = taskService.markTaskAsCompleted(id); 

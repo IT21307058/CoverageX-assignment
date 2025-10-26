@@ -10,9 +10,6 @@ public interface TaskServiceInterface {
 
     Page<TaskDTO> getAllTasks(Pageable p);
 
-    TaskDTO getTaskById(Long id);
+    TaskDTO markTaskAsCompleted(Long id);
 
-    TaskDTO updateTask(Long id, TaskDTO dto);
-
-    void deleteTask(Long id);
 }
