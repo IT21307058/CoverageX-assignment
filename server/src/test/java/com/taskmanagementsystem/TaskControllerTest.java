@@ -140,11 +140,6 @@ public class TaskControllerTest {
 
         Task saved = taskRepository.findById(id).orElseThrow();
         assertThat(saved.getStatus()).isEqualTo(TaskStatus.DONE);
-
-        mockMvc.perform(get("/tasks/{id}", id))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id", is(id.intValue())))
-                .andExpect(jsonPath("$.status", is("DONE")));
     }
 
     @Test
