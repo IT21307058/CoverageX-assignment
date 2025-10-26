@@ -67,7 +67,7 @@ Task entity includes & TaskDTO is used for API communication to ensure clean dat
 **Goal:** Achieve **100% line and branch coverage** for core business logic.
 
 ### 5. Integration Testing
-- Integration testing ensures that multiple components (controller, service, and repository) work together as expected in a real runtime environment.
+Integration testing ensures that multiple components (controller, service, and repository) work together as expected in a real runtime environment.
 
 ### 6. Frontend Unit Testing
 **Tools:** Jest + React Testing Library
@@ -76,11 +76,72 @@ Task entity includes & TaskDTO is used for API communication to ensure clean dat
 **Tools:** Cypress
 **Goal:** Simulates the entire user journey
 
-### 8. End-to-End Testing (E2E)
--  backend, databse and frontend are containerized using Docker.
+### 8. Deployment Approach
+backend, databse and frontend are containerized using Docker.
 **Tools:** Docker
 Dockerfiles:
 - Backend → openjdk:21-jdk-slim
 - Frontend → node:18-alpine
 
 - Docker Compose: Combines both into a single environment.
+
+
+
+## How to Build and Run the Project
+
+### 🖥️ 1. Backend Setup (Spring Boot)
+
+#### 📁 Navigate to backend folder
+```bash
+cd server 
+
+####  Build the project
+```bash
+mvn clean package
+
+####  Run the Spring Boot application
+```bash
+mvn spring-boot:run
+
+
+### 🖥️ 2. Frontend Setup (React)
+
+#### 📁 Navigate to backend folder
+```bash
+cd client
+
+####  Install dependencies
+```bash
+npm i
+
+####  Run the development server
+```bash
+npm start
+
+
+### 🖥️ 2. Docker Compose
+
+#### Run backend, database and frontend containers
+```bash
+docker compose up
+
+
+### 🖥️ 2. Testing Instructions
+
+#### Backend
+```bash
+cd backend
+mvn test
+
+#### End to End Testing
+```bash
+cd frontend
+npx cypress open
+
+
+
+
+
+
+
+
